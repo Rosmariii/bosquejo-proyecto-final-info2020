@@ -4,6 +4,10 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="{% url 'home' %}">Volver</a>
+    <div style= "margin: 10px;"><h5>Encabezado</h5></div>
+    {%block content%}
+    
+    {% endblock %}
+    <div style= "margin-top: 10px;"><h5>Pie</h5></div>
 </body>
 </html>
