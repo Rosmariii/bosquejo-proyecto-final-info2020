@@ -4,7 +4,16 @@
     <title>info-tpfinal</title>
 </head>
 <body>
-    <div style= "margin: 50px;"><h5>Encabezado</h5></div>
+
+    <div style= "margin: 50px;"><h5>Encabezado</h5>
+    {% if user.is_authenticated %}
+        <span> Hola {{user.username}}</span>
+        <a href="{% url 'logout'%}">SALIR</a>
+    {% else %}
+        <a href="{% url 'login'%}">INGRESAR</a>
+    {% endif %}
+    </div>
+
     {%block content%}
     
     {% endblock %}

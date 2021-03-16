@@ -6,6 +6,8 @@
         <form method="POST" enctype="multipart/form-data">{% csrf_token %}
             {{form.as_p}}
             <input type="submit" name="enviar" value="GUARDAR">
+<!--para ordenar por fecha
+productos = Producto.objects.all().order_by('fecha')-->
         </form>
 	</div>
 {% endblock content %}

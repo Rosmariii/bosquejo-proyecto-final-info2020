@@ -3,5 +3,12 @@
 	{% block content %}
 
 	    <h1>Listar productos<h1>
-	
+		{%for productos in p %} 
+		<p>{{productos.nombre}}</p>
+		<p>{{productos.precio}}</p>
+		
+		{% endfor %}
+		<h4>
+		<a href="/">volver al inicio</a>
+		</h4>
 	{% endblock content %}
